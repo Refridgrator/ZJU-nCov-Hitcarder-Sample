@@ -17,6 +17,10 @@ jobs:
             dingtalk_token: DINGTALK_TOKEN
             serverchan_key: SERVERCHAN_KEY
     steps:
+      - name: Install packages
+        run: |
+          pip3 install requests
+          pip3 install ddddocr
       - name: Working
         uses: Refridgrator/zju-ncov-hitcarder@master
         with:
